@@ -1,9 +1,10 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import NavBar from './Components/NavBar/NavBar';
-import Home from './Pages/Home/Home';
-import Card from './Pages/Card/Card';
-import PlaceHolder from './Pages/PlaceOrder/PlaceHolder';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar/NavBar";
+import Home from "./Pages/Home/Home";
+import Card from "./Pages/Card/Card";
+import PlaceHolder from "./Pages/PlaceOrder/PlaceHolder";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/order" element={<PlaceHolder />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 };

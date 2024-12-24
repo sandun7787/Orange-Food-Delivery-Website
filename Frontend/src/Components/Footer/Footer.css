@@ -1,0 +1,127 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #1e1e1e; /* Slightly darker for better contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 8vw;
+    padding-top: 80px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Adds a soft shadow effect */
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px; /* Reduced gap for balance */
+    transition: all 0.3s ease-in-out; /* Smooth layout changes */
+}
+
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #bdbdbd;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-content-left li:hover,
+.footer-content-right li:hover,
+.footer-content-center li:hover {
+    color: #ffffff;
+    transform: translateX(5px); /* Subtle hover animation */
+}
+
+.footer-content-right h2,
+.footer-content-center h2 {
+    color: #ffffff;
+    font-size: 18px;
+    border-bottom: 2px solid #ff9800; /* Underline for a modern look */
+    padding-bottom: 5px;
+}
+
+.footer-content-left {
+    color: #d9d9d9;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #d9d9d9;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9800; /* Highlight effect */
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #bdbdbd;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-content-left,
+    .footer-content-right,
+    .footer-content-center {
+        align-items: center;
+    }
+
+    .footer-content-right h2,
+    .footer-content-center h2 {
+        text-align: center;
+    }
+}
+
+.footer-social-icons img{
+    width:40px ;
+    margin-right: 15px;
+}
+
+.footer hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: #ff9800; /* A vibrant color to draw attention */
+    border: none;
+    border-radius: 2px; /* Smooth edges for a polished look */
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.footer hr:hover {
+    background-color: #ffffff; /* Changes to white on hover */
+    width: 120px; /* Slight expansion on hover for interactivity */
+}
+
