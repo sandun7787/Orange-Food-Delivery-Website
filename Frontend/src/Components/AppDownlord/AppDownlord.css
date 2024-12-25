@@ -3,18 +3,15 @@
 /* Styling for the main app-download container */
 .app-download {
     text-align: center;
-    background-color: #f8f8f8; /* Light background for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    margin: 20px auto;
-    max-width: 400px; /* Restrict the width for a cleaner look */
+    margin:  auto auto;
+    margin-top: 100px;
     font-family: 'Arial', sans-serif;
+    font-size:max(3vw ,20px) ;
+    font-weight:500 ;
   }
   
   /* Text styling */
   .app-download p {
-    font-size: 18px;
     color: #333; /* Dark gray for readability */
     margin-bottom: 20px;
     line-height: 1.5; /* Better readability for multiline text */
