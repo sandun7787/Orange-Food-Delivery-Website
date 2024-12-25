@@ -1,0 +1,44 @@
+/* AppDownlord.css */
+
+/* Styling for the main app-download container */
+.app-download {
+    text-align: center;
+    background-color: #f8f8f8; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin: 20px auto;
+    max-width: 400px; /* Restrict the width for a cleaner look */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Text styling */
+  .app-download p {
+    font-size: 18px;
+    color: #333; /* Dark gray for readability */
+    margin-bottom: 20px;
+    line-height: 1.5; /* Better readability for multiline text */
+  }
+  
+  /* Flexbox for download platforms */
+  .App-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  /* Image styles for app store and play store logos */
+  .App-download-platforms img {
+    width: 120px; /* Adjust width for proper scaling */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for images */
+  .App-download-platforms img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pop-out effect */
+  }
+  
