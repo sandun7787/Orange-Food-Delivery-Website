@@ -1,32 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-
-*{
-  padding: 0;;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: outfit;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.app{
+.app {
   width: 80%;
   margin: auto;
 }
 
-@keyframes fadeIn{
-  0%{
+@keyframes fadeIn {
+  0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  100%{
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* Example usage of animations */
+.fade-in-element {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.slide-in-element {
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+.scale-up-element {
+  animation: scaleUp 1.5s ease-in forwards;
+}
+
+.rotate-in-element {
+  animation: rotateIn 1.5s ease-in-out forwards;
+}
+
+/* Example content */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Styling for text */
+.text {
+  font-size: 20px;
+  color: #49557e;
 }
