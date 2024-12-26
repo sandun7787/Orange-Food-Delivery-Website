@@ -1,0 +1,182 @@
+/* Main Popup */
+.login-popup {
+    position: fixed;
+    z-index: 1000; /* Higher z-index to ensure the popup appears above other elements */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    display: grid;
+    place-items: center; /* Centers the container both horizontally and vertically */
+    top: 0;
+    left: 0;
+}
+
+/* Container for the login form */
+.login-popup-container {
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to the popup */
+}
+
+/* Popup Title with Close Button */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.login-popup-title img:hover {
+    transform: rotate(90deg); /* Rotate the close icon when hovered */
+}
+
+/* Inputs styling */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual input fields */
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+}
+
+.login-popup-inputs input:focus {
+    border-color: #ff6f61; /* Focus color */
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Box-shadow effect */
+}
+
+.login-popup-inputs input::placeholder {
+    color: #bbb;
+}
+
+/* Button Styling */
+.login-popup-container button {
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    color: white;
+    background-color: #ff6f61;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+.login-popup-container button:hover {
+    background-color: #e65c4d; /* Darker shade of the button */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Checkbox and Terms Section */
+.login-popup-condition {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.login-popup-condition input[type='checkbox'] {
+    transform: scale(1.2); /* Larger checkbox for better visibility */
+}
+
+.login-popup-condition a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.login-popup-condition a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer with Signup/Signin link */
+.login-popup-container p {
+    font-size: 12px;
+    color: #333;
+}
+
+.login-popup-container span {
+    color: #ff6f61;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-popup-container span:hover {
+    text-decoration: underline;
+}
+
+/* Social Login Buttons */
+.login-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-social-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-social-buttons button:hover {
+    background-color: #f5f5f5;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-popup-condition{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+.login-popup p span{
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+}
