@@ -1,0 +1,108 @@
+/* PlaceHolder.css */
+
+/* General styles */
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .place-order-left, .place-order-right {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #d61717;
+    box-shadow: 0 0 5px rgba(243, 88, 22, 0.5);
+  }
+  
+  /* Multi-fields layout */
+  .multi-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .multi-fields input {
+    flex: 1;
+  }
+  
+  /* Cart totals styles */
+  .cart-total {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out forwards;
+    animation-delay: 0.3s; /* Delays the fade-in of the cart */
+  }
+  
+  .cart-total h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+  
+  hr {
+    margin: 10px 0;
+    border: 1px solid #eee;
+  }
+  
+  /* Button animation */
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: tomato;
+    transform: scale(1.05);
+  }
+  
+  /* Fade-in animation for elements */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
