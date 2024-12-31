@@ -1,21 +1,24 @@
 import express from "express";
 import cors from "cors";
 import { connectDb } from "./config/db.js";
+import foodRouter from "./routs/foodRoute.js"; // Correct import path for food routes
 
 const app = express();
-const port = 4000; // Corrected to a standard port number
+const port = 4000;
 
 app.use(express.json());
 app.use(cors());
 
-connectDb();
+connectDb(); // Connect to the database
 
+// API endpoint
+app.use("/api/food", foodRouter);
+
+// Default route
 app.get("/", (req, res) => {
-    res.send("API WORKING");
+  res.send("API WORKING");
 });
 
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`); // Fixed the template literal
+  console.log(`Server running at http://localhost:${port}`);
 });
-
-//mongodb+srv://sajini2224:1234567890@cluster0.fy4qy.mongodb.net/?
