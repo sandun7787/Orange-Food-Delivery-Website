@@ -1,62 +1,98 @@
-/* sidebar.css */
+/* General Sidebar Styling */
 .sidebar {
-    width: 18%;
-   min-height:  100vh; /* Set the height to 100% of the viewport height */
-    border: 1.5px solid #a9a9a9;
-    border-top: 0;
-    
-}
-
-.sidebar-options {
-    padding-top: 50px;
-    padding-left: 20px; /* Adjust padding-left for proper spacing */
+    width: 250px; /* Sidebar width */
+    background-color: #ffffff; /* Background color */
+    border-right: 1px solid #e0e0e0; /* Subtle border for separation */
+    padding: 20px 10px; /* Inner padding */
+    height: 100vh; /* Full height of the viewport */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border:1px solid #a9a9a9 ;
-    border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px;
-    cursor: pointer;
-
-}
-
-@media(max-width:900px){
-    .sidebar-option p{
-        display: none;
-        
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+  }
+  
+  /* Container for Sidebar Options */
+  .sidebar-options {
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+    gap: 15px; /* Spacing between items */
+  }
+  
+  /* Individual Sidebar Option */
+  .sidebar-option {
+    display: flex;
+    align-items: center; /* Align text and icon horizontally */
+    gap: 10px; /* Space between icon and text */
+    text-decoration: none; /* Remove default underline from links */
+    color: #333; /* Default text color */
+    font-weight: 500; /* Slightly bold font */
+    padding: 10px; /* Inner spacing for clickable area */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover/active states */
+  }
+  
+  /* Icon Styling */
+  .sidebar-option img {
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+  }
+  
+  /* Text Styling */
+  .sidebar-option p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  /* Hover State */
+  .sidebar-option:hover {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #007bff; /* Highlight text color */
+    cursor: pointer; /* Indicate interactivity */
+  }
+  
+  /* Active State Styling */
+  .sidebar-option.active {
+    background-color: tomato; /* Primary blue background */
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Reduce sidebar width on smaller screens */
+      padding: 15px; /* Adjust padding */
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    .sidebar-option p {
+      font-size: 14px; /* Slightly smaller text */
+    }
+  
+    .sidebar-option img {
+      width: 20px; /* Smaller icon size */
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 180px; /* Further reduce width for very small screens */
+      padding: 10px;
+    }
+  
+    .sidebar-option {
+      gap: 8px; /* Adjust spacing */
+      padding: 8px; /* Smaller padding */
+    }
+  
+    .sidebar-option p {
+      font-size: 12px; /* Smaller text */
+    }
+  
+    .sidebar-option img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
